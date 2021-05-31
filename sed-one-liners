@@ -1,0 +1,7 @@
+
+# comment lines between a start and end pattern
+# not including the end pattern
+
+sed -i \
+  '/start_pattern/,/end_pattern/ { /end_pattern/b; s/^/#/ }' my-file.txt
+  
