@@ -5,3 +5,11 @@
 sed -i \
   '/start_pattern/,/end_pattern/ { /end_pattern/b; s/^/#/ }' my-file.txt
   
+ 
+# the 'w' writes to the stdout so we know what's changed
+sed -i \
+  '/find_pattern/replace_pattern/w /dev/stdout' \
+   my_file.txt
+   
+   
+  
